@@ -18,7 +18,7 @@ is claimed.**
 | Week | Task | Status |
 |---|---|---|
 | 1 | Dataset download, loader, validation, data audit, glossary, literature notes | Done ([summary](docs/PHASE1_SUMMARY.md)) |
-| 2 | Chronological splits, conventional baselines | Not started |
+| 2 | Chronological splits, preprocessing, leakage tests, conventional baselines | Done ([results](reports/phase2_baselines.md)) |
 | 3 | Sparse PN→KC encoder + top-k | Not started |
 | 4 | Familiarity memory, ablations | Not started |
 | 5 | 20+ seed evaluation, figures | Not started |
@@ -42,6 +42,7 @@ pip install -r requirements.txt
 python scripts/download_data.py
 python scripts/audit_data.py
 python -m pytest
+python scripts/run_baselines.py   # Phase 2, ~7 min on 12 cores
 ```
 
 ## Documentation
@@ -54,10 +55,16 @@ python -m pytest
 ## Layout
 
 ```
-src/biomorph/data.py      load + validate the 10 batch files
+src/biomorph/data.py        load + validate the 10 batch files
+src/biomorph/preprocess.py  P1 (signed log + FIT z-score), P2 (+ L2 per sample)
+src/biomorph/protocol.py    chronological leave-one-gas-out split
+src/biomorph/baselines.py   conventional detectors (higher score = more novel)
+src/biomorph/experiment.py  tune -> fit -> threshold -> freeze -> test
+src/biomorph/metrics.py     AUROC, AUPRC, FPR/TPR at threshold
+scripts/run_baselines.py    Phase 2 runner -> results/, reports/phase2_baselines.md
 scripts/download_data.py  fetch dataset, verify checksum
 scripts/audit_data.py     regenerate reports/data_audit.md and figures
-tests/                    parser and dataset-fact tests
+tests/                    parser, dataset-fact and leakage tests
 reports/                  generated audit report and figures
 docs/                     roadmap, glossary, literature notes
 ```
