@@ -1,0 +1,11 @@
+# Raw dataset is downloaded by scripts/download_data.py, not committed
+data/raw/*
+!data/raw/.gitkeep
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store
