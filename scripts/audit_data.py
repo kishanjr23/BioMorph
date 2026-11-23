@@ -95,6 +95,34 @@ def shift_table(X: np.ndarray, gas: np.ndarray, batch: np.ndarray) -> pd.DataFra
     return df.pivot_table(index="batch", columns="gas", values="dr", aggfunc="median")
 
 
+PRIMARY_HELDOUT = [1, 2, 3, 4, 5]  # toluene (6) excluded: absent from batches 3-5
+
+
+def heldout_tables(ct: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """For each planned held-out-gas experiment: Batch-1 training size and
+    the share of unfamiliar (held-out) samples in every test batch."""
+    gas_cols = [GAS_NAMES[g] for g in sorted(GAS_NAMES)]
+    per_batch = ct.drop(index="Total")[gas_cols]
+    train_rows, share = [], {}
+    for g in PRIMARY_HELDOUT:
+        name = GAS_NAMES[g]
+        familiar = [c for c in gas_cols if c != name]
+        b1 = per_batch.loc[1]
+        train_rows.append(
+            {
+                "held-out gas": name,
+                "Batch-1 familiar samples": int(b1[familiar].sum()),
+                "smallest familiar gas in Batch 1": f"{b1[familiar].idxmin()} ({int(b1[familiar].min())})",
+                "Batch-1 held-out samples (not trained on)": int(b1[name]),
+            }
+        )
+        share[name] = per_batch[name] / per_batch.sum(axis=1)
+    train = pd.DataFrame(train_rows).set_index("held-out gas")
+    share_df = pd.DataFrame(share).loc[2:]
+    share_df.index.name = "test batch"
+    return train, share_df
+
+
 def plot_counts(ct: pd.DataFrame) -> Path:
     data = ct.drop(index="Total", columns="Total")
     fig, ax = plt.subplots(figsize=(8, 4))
@@ -197,6 +225,7 @@ def main() -> None:
 
     b1 = ct.loc[1].drop("Total")
     smallest_gas = b1.idxmin()
+    ho_train, ho_share = heldout_tables(ct)
 
     months = pd.DataFrame(
         {"months": [BATCH_MONTHS[b] for b in range(1, N_BATCHES + 1)]},
@@ -239,6 +268,18 @@ Observations for the experimental design:
   from batches 2-5.
 - The gas mix changes a lot between batches, so the share of "unfamiliar" samples
   differs per batch. AUPRC must be reported alongside that share.
+
+### 3a. What each planned held-out-gas experiment looks like
+
+Training uses Batch 1, familiar gases only (all gases except the held-out one,
+toluene included):
+
+{md_table(ho_train)}
+
+Share of **unfamiliar** samples in each test batch. This is the chance level
+of AUPRC for that batch, so AUPRC values are only comparable to this baseline:
+
+{md_table(ho_share, ".2f")}
 
 ## 4. Feature value ranges
 

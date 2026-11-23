@@ -17,7 +17,7 @@ is claimed.**
 
 | Week | Task | Status |
 |---|---|---|
-| 1 | Dataset download, loader, validation, data audit | Done |
+| 1 | Dataset download, loader, validation, data audit, glossary, literature notes | Done ([summary](docs/PHASE1_SUMMARY.md)) |
 | 2 | Chronological splits, conventional baselines | Not started |
 | 3 | Sparse PN→KC encoder + top-k | Not started |
 | 4 | Familiarity memory, ablations | Not started |
@@ -44,6 +44,13 @@ python scripts/audit_data.py
 python -m pytest
 ```
 
+## Documentation
+
+- [`docs/ROADMAP.md`](docs/ROADMAP.md): phase-by-phase plan
+- [`docs/PHASE1_SUMMARY.md`](docs/PHASE1_SUMMARY.md): what Phase 1 established, and open team tasks
+- [`docs/GLOSSARY.md`](docs/GLOSSARY.md): precise terminology (biology ↔ engineering)
+- [`docs/literature/`](docs/literature/): paper notes with reading checklists
+
 ## Layout
 
 ```
@@ -52,6 +59,7 @@ scripts/download_data.py  fetch dataset, verify checksum
 scripts/audit_data.py     regenerate reports/data_audit.md and figures
 tests/                    parser and dataset-fact tests
 reports/                  generated audit report and figures
+docs/                     roadmap, glossary, literature notes
 ```
 
 ## References

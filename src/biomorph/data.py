@@ -13,10 +13,10 @@ belongs to sensor ceil(j / 8). Within each sensor the 8 features are:
     0 dR          steady-state resistance change
     1 |dR|norm    normalized steady-state feature (ratio to baseline)
     2-4 ema_rise  max of exponential moving average of rising transient,
-                  three smoothing values alpha (0.001, 0.01, 0.1)
-    5-7 ema_decay min of EMA of decaying transient, same three alphas
-The alpha ordering inside groups follows the dataset paper (Vergara et al.
-2012); treat it as documentation, not something the code depends on.
+                  alpha = 0.001, 0.01, 0.1 (in that order)
+    5-7 ema_decay min of EMA of decaying transient, same alphas and order
+Order and alpha values confirmed from the UCI dataset page (Nov 2026).
+The `a1/a2/a3` suffixes in FEATURE_KINDS mean alpha 0.001/0.01/0.1.
 """
 
 from __future__ import annotations

@@ -55,6 +55,34 @@ Observations for the experimental design:
 - The gas mix changes a lot between batches, so the share of "unfamiliar" samples
   differs per batch. AUPRC must be reported alongside that share.
 
+### 3a. What each planned held-out-gas experiment looks like
+
+Training uses Batch 1, familiar gases only (all gases except the held-out one,
+toluene included):
+
+| held-out gas | Batch-1 familiar samples | smallest familiar gas in Batch 1 | Batch-1 held-out samples (not trained on) |
+|---|---|---|---|
+| Ethanol | 355 | Acetaldehyde (30) | 90 |
+| Ethylene | 347 | Acetaldehyde (30) | 98 |
+| Ammonia | 362 | Acetaldehyde (30) | 83 |
+| Acetaldehyde | 415 | Acetone (70) | 30 |
+| Acetone | 375 | Acetaldehyde (30) | 70 |
+
+Share of **unfamiliar** samples in each test batch. This is the chance level
+of AUPRC for that batch, so AUPRC values are only comparable to this baseline:
+
+| test batch | Ethanol | Ethylene | Ammonia | Acetaldehyde | Acetone |
+|---|---|---|---|---|---|
+| 2 | 0.13 | 0.27 | 0.08 | 0.09 | 0.43 |
+| 3 | 0.23 | 0.31 | 0.14 | 0.15 | 0.17 |
+| 4 | 0.40 | 0.27 | 0.07 | 0.19 | 0.07 |
+| 5 | 0.14 | 0.20 | 0.10 | 0.23 | 0.32 |
+| 6 | 0.22 | 0.25 | 0.05 | 0.01 | 0.26 |
+| 7 | 0.18 | 0.18 | 0.10 | 0.21 | 0.17 |
+| 8 | 0.10 | 0.10 | 0.14 | 0.11 | 0.49 |
+| 9 | 0.13 | 0.12 | 0.21 | 0.16 | 0.17 |
+| 10 | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 |
+
 ## 4. Feature value ranges
 
 | feature kind | min | median | max | fraction < 0 |
