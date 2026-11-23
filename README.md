@@ -19,7 +19,7 @@ is claimed.**
 |---|---|---|
 | 1 | Dataset download, loader, validation, data audit, glossary, literature notes | Done ([summary](docs/PHASE1_SUMMARY.md)) |
 | 2 | Chronological splits, preprocessing, leakage tests, conventional baselines | Done ([results](reports/phase2_baselines.md)) |
-| 3 | Sparse PN→KC encoder + top-k | Not started |
+| 3 | Sparse PN→KC encoder + top-k, MVP slice (acetone) | Done ([summary](docs/PHASE3_SUMMARY.md)) |
 | 4 | Familiarity memory, ablations | Not started |
 | 5 | 20+ seed evaluation, figures | Not started |
 | 6 | Dashboard, report, slides | Not started |
@@ -43,6 +43,8 @@ python scripts/download_data.py
 python scripts/audit_data.py
 python -m pytest
 python scripts/run_baselines.py   # Phase 2, ~7 min on 12 cores
+python scripts/encoder_diagnostics.py   # Phase 3 encoder figures, ~20 s
+python scripts/run_mvp.py               # Phase 3 MVP slice, ~1 min
 ```
 
 ## Documentation
@@ -62,6 +64,8 @@ src/biomorph/baselines.py   conventional detectors (higher score = more novel)
 src/biomorph/experiment.py  tune -> fit -> threshold -> freeze -> test
 src/biomorph/metrics.py     AUROC, AUPRC, FPR/TPR at threshold
 scripts/run_baselines.py    Phase 2 runner -> results/, reports/phase2_baselines.md
+src/biomorph/fly/           encoder (PN -> KC -> top-k) and familiarity memory
+scripts/encoder_diagnostics.py, scripts/run_mvp.py   Phase 3
 scripts/download_data.py  fetch dataset, verify checksum
 scripts/audit_data.py     regenerate reports/data_audit.md and figures
 tests/                    parser, dataset-fact and leakage tests

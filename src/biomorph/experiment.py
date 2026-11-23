@@ -30,8 +30,11 @@ from sklearn.metrics import roc_auc_score
 from .baselines import METHODS, MethodSpec
 from .data import GAS_NAMES, DriftDataset
 from .metrics import evaluate, threshold_from_calib
+from .fly import FLY_METHODS
 from .preprocess import Preprocessor
 from .protocol import TEST_BATCHES, Split
+
+ALL_METHODS = {**METHODS, **FLY_METHODS}
 
 
 @dataclass
@@ -86,7 +89,7 @@ def fit_frozen(
     gas_calib: np.ndarray,
     seed: int,
 ) -> FrozenModel:
-    spec = METHODS[method]
+    spec = ALL_METHODS[method]
     config, tuning_rows = tune(spec, prep_mode, X_fit, gas_fit, X_calib, gas_calib, seed)
     pre = Preprocessor(prep_mode).fit(X_fit)
     det = spec.build(config, seed).fit(pre.transform(X_fit), gas_fit)
@@ -105,7 +108,7 @@ def run_split(ds: DriftDataset, split: Split, method: str, prep_mode: str):
     )
     base = {
         "method": method,
-        "label_use": METHODS[method].label_use,
+        "label_use": ALL_METHODS[method].label_use,
         "prep": prep_mode,
         "heldout": split.heldout,
         "heldout_name": GAS_NAMES[split.heldout],
