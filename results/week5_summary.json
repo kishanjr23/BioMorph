@@ -1,0 +1,59 @@
+{
+ "bootstrap": {
+  "replicates": 1000,
+  "resampled": "seeds x test samples (within batch and class); paired across detectors",
+  "ci": "95% percentile"
+ },
+ "reproducibility_max_abs_diff": 0.0,
+ "strength_hypothesis": {
+  "rho_euclid_minus_cosine": 0.08300395256916995,
+  "p_spearman": 0.5877663716162305,
+  "p_permutation_within_gas": 0.3994,
+  "rho_mahalanobis_minus_fly": -0.07852437417654808,
+  "p_spearman_mahalanobis_fly": 0.6081420528566212,
+  "n_cells": 45,
+  "note": "exploratory; hypothesis formed after Week-4 results; cells are not independent"
+ },
+ "strength_separability_by_gas": {
+  "Acetaldehyde": 0.27,
+  "Acetone": 0.747,
+  "Ammonia": 0.488,
+  "Ethanol": 0.347,
+  "Ethylene": 0.523
+ },
+ "saturation_by_gas": {
+  "Acetaldehyde": {
+   "frac_w0": 0.6665,
+   "frac_never_active": 0.3335
+  },
+  "Acetone": {
+   "frac_w0": 0.6358,
+   "frac_never_active": 0.3642
+  },
+  "Ammonia": {
+   "frac_w0": 0.8115,
+   "frac_never_active": 0.1885
+  },
+  "Ethanol": {
+   "frac_w0": 0.8456,
+   "frac_never_active": 0.1544
+  },
+  "Ethylene": {
+   "frac_w0": 0.3781,
+   "frac_never_active": 0.6219
+  }
+ },
+ "fly_mean_novelty_of_familiar_by_batch": {
+  "2": 0.0844,
+  "3": 0.0911,
+  "4": 0.1021,
+  "5": 0.0765,
+  "6": 0.1079,
+  "7": 0.0986,
+  "8": 0.1164,
+  "9": 0.1111,
+  "10": 0.0828
+ },
+ "fly_calib_mean_fpr": 0.05069983555870653,
+ "runtime_s": 61
+}

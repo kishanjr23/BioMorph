@@ -1,0 +1,21 @@
+[theme]
+base = "light"
+primaryColor = "#2F3D1C"
+backgroundColor = "#EEF0E6"
+secondaryBackgroundColor = "#E3E7D6"
+textColor = "#1C2412"
+linkColor = "#2F3D1C"
+borderColor = "#CDD2BF"
+showWidgetBorder = true
+baseRadius = "0.45rem"
+buttonRadius = "0.2rem"
+font = "Inter Tight:https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+headingFont = "Inter Tight:https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap"
+codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
+headingFontWeights = [400, 400, 500, 500, 500, 500]
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false

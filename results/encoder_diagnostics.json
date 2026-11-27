@@ -1,0 +1,38 @@
+{
+  "encoder": {
+    "n_kc": 2000,
+    "conn_per_kc": 7,
+    "active_frac": 0.05,
+    "n_seeds": 20
+  },
+  "mean": {
+    "active_frac_per_sample": 0.05,
+    "silent_kc_frac_batch1": 0.2831,
+    "silent_kc_frac_all": 0.105,
+    "max_kc_lifetime_activity_batch1": 0.4804,
+    "spearman_cos_vs_overlap_batch1": 0.9558,
+    "overlap_within_gas_batch1": 0.3836,
+    "overlap_between_gas_batch1": 0.139
+  },
+  "sd": {
+    "active_frac_per_sample": 0.0,
+    "silent_kc_frac_batch1": 0.0069,
+    "silent_kc_frac_all": 0.0069,
+    "max_kc_lifetime_activity_batch1": 0.0126,
+    "spearman_cos_vs_overlap_batch1": 0.0024,
+    "overlap_within_gas_batch1": 0.0035,
+    "overlap_between_gas_batch1": 0.0041
+  },
+  "median_max_abs_z_by_batch": {
+    "1": 1.44,
+    "2": 2.71,
+    "3": 3.95,
+    "4": 6.7,
+    "5": 4.05,
+    "6": 2.83,
+    "7": 2.31,
+    "8": 1.61,
+    "9": 2.13,
+    "10": 2.15
+  }
+}

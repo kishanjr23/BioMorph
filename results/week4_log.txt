@@ -1,0 +1,55 @@
+﻿tuned for held-out Ethanol       fly={'n_kc': 2000, 'active_frac': 0.1, 'conn': 7, 'beta': 0.0} inner AUROC=0.892 (9s)
+tuned for held-out Ethylene      fly={'n_kc': 2000, 'active_frac': 0.02, 'conn': 7, 'beta': 0.0} inner AUROC=0.850 (18s)
+tuned for held-out Ammonia       fly={'n_kc': 2000, 'active_frac': 0.1, 'conn': 12, 'beta': 0.0} inner AUROC=0.868 (28s)
+tuned for held-out Acetaldehyde  fly={'n_kc': 2000, 'active_frac': 0.05, 'conn': 7, 'beta': 0.0} inner AUROC=0.889 (40s)
+tuned for held-out Acetone       fly={'n_kc': 2000, 'active_frac': 0.05, 'conn': 7, 'beta': 0.0} inner AUROC=0.813 (61s)
+evaluated held-out Ethanol       (179s)
+evaluated held-out Ethylene      (317s)
+evaluated held-out Ammonia       (464s)
+evaluated held-out Acetaldehyde  (637s)
+evaluated held-out Acetone       (811s)
+
+=== Batches 2-10 (macro over batches), mean over 5 gases x 20 seeds ===
+                                                    auroc  auprc  fpr_familiar  detection_rate  B1_ref_auroc
+detector                                                                                                    
+kNN (cosine)                                        0.600  0.265         0.814           0.922         0.870
+Mahalanobis                                         0.595  0.321         0.661           0.766         0.879
+Ablation: no plastic memory (KC nearest neighbour)  0.588  0.268         0.764           0.853         0.871
+Ablation: dense wiring                              0.575  0.272         0.746           0.821         0.821
+One-Class SVM                                       0.572  0.297         0.785           0.847         0.844
+kNN (Euclidean)                                     0.570  0.313         0.807           0.853         0.907
+Fly model (full)                                    0.568  0.271         0.749           0.808         0.835
+Isolation Forest                                    0.548  0.287         0.322           0.337         0.748
+Ablation: no expansion (m=128)                      0.524  0.250         0.373           0.418         0.614
+Ablation: no top-k (fixed threshold)                0.506  0.220         0.026           0.074         0.484
+Random (sanity)                                     0.500  0.191         0.063           0.062         0.491
+
+=== Macro AUROC by held-out gas ===
+heldout_name                                        Acetaldehyde  Acetone  Ammonia  Ethanol  Ethylene
+detector                                                                                             
+Ablation: dense wiring                                     0.607    0.665    0.659    0.587     0.358
+Ablation: no expansion (m=128)                             0.537    0.568    0.583    0.517     0.418
+Ablation: no plastic memory (KC nearest neighbour)         0.618    0.565    0.674    0.633     0.450
+Ablation: no top-k (fixed threshold)                       0.393    0.504    0.452    0.644     0.535
+Fly model (full)                                           0.559    0.627    0.646    0.610     0.400
+Isolation Forest                                           0.436    0.535    0.321    0.835     0.612
+Mahalanobis                                                0.420    0.572    0.539    0.845     0.597
+One-Class SVM                                              0.465    0.606    0.346    0.866     0.576
+Random (sanity)                                            0.498    0.502    0.495    0.498     0.505
+kNN (Euclidean)                                            0.468    0.580    0.351    0.864     0.585
+kNN (cosine)                                               0.654    0.582    0.690    0.613     0.462
+
+=== Paired: Fly(full) minus other, macro AUROC (100 gas x seed pairs) ===
+                                                vs  mean_diff    sd  fly_better_frac  gases_fly_better
+                                       Mahalanobis     -0.026 0.174             0.56                 3
+                                   kNN (Euclidean)     -0.001 0.211             0.55                 3
+                                     One-Class SVM     -0.004 0.211             0.55                 3
+                                  Isolation Forest      0.021 0.223             0.58                 3
+                                      kNN (cosine)     -0.032 0.089             0.35                 1
+                    Ablation: no expansion (m=128)      0.044 0.133             0.62                 4
+                            Ablation: dense wiring     -0.007 0.099             0.45                 2
+              Ablation: no top-k (fixed threshold)      0.063 0.155             0.71                 3
+Ablation: no plastic memory (KC nearest neighbour)     -0.020 0.088             0.44                 1
+                                   Random (sanity)      0.069 0.116             0.82                 4
+
+done in 816s

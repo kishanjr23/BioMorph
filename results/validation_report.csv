@@ -1,0 +1,10 @@
+check,passed,detail
+Total samples,True,13910 (expected 13910)
+Batches present,True,"[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9), np.int64(10)]"
+Feature count,True,128 columns
+No missing feature values,True,0 missing
+No infinite values,True,0 infinite
+Six gas classes,True,"labels [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6)]"
+"Toluene gap (batches 3, 4, 5)",True,"batches with zero toluene: [3, 4, 5]"
+Primary gases present in every batch,True,all present
+Duplicate feature rows (informational),True,0 exact duplicates

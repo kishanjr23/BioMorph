@@ -1,0 +1,2567 @@
+{
+ "Ethanol": {
+  "Mahalanobis": {
+   "chosen": {},
+   "inner_auroc": 0.8911868102726048,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.8912
+    }
+   ]
+  },
+  "kNN (Euclidean)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.8911374940899546,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.862
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.8911
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.8752
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.839
+    }
+   ]
+  },
+  "One-Class SVM": {
+   "chosen": {
+    "nu": 0.05,
+    "gamma_mult": 10.0
+   },
+   "inner_auroc": 0.8762628194704399,
+   "grid": [
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.7941
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6498
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8763
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.7941
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.648
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8762
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.8066
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6369
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8759
+    }
+   ]
+  },
+  "Isolation Forest": {
+   "chosen": {
+    "max_features": 1.0
+   },
+   "inner_auroc": 0.7954181077999856,
+   "grid": [
+    {
+     "params": {
+      "max_features": 1.0
+     },
+     "inner_auroc": 0.7954
+    },
+    {
+     "params": {
+      "max_features": 0.5
+     },
+     "inner_auroc": 0.7845
+    }
+   ]
+  },
+  "kNN (cosine)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.8501468595898596,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.8331
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.8501
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.8383
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.8236
+    }
+   ]
+  },
+  "Fly model (full)": {
+   "chosen": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "inner_auroc": 0.8921385659985738,
+   "grid": [
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8528
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8529
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.8016
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6988
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.883
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8868
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.8247
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6836
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8596
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8605
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7972
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6894
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8439
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8663
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7977
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6991
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8403
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8251
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7759
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.686
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8435
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8727
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.8105
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.7139
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8921
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.87
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.8015
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6853
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8712
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8458
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.784
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6769
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8633
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8656
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.79
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6841
+    }
+   ]
+  },
+  "Random (sanity)": {
+   "chosen": {},
+   "inner_auroc": 0.49017255590998526,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.4902
+    }
+   ]
+  }
+ },
+ "Ethylene": {
+  "Mahalanobis": {
+   "chosen": {},
+   "inner_auroc": 0.8808183408142132,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.8808
+    }
+   ]
+  },
+  "kNN (Euclidean)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.8830402411738278,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.8574
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.883
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.8669
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.8252
+    }
+   ]
+  },
+  "One-Class SVM": {
+   "chosen": {
+    "nu": 0.01,
+    "gamma_mult": 10.0
+   },
+   "inner_auroc": 0.8460057865698298,
+   "grid": [
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.7368
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6325
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8455
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.7355
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6372
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.846
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.7517
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6186
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8455
+    }
+   ]
+  },
+  "Isolation Forest": {
+   "chosen": {
+    "max_features": 1.0
+   },
+   "inner_auroc": 0.7784116299207083,
+   "grid": [
+    {
+     "params": {
+      "max_features": 1.0
+     },
+     "inner_auroc": 0.7784
+    },
+    {
+     "params": {
+      "max_features": 0.5
+     },
+     "inner_auroc": 0.7754
+    }
+   ]
+  },
+  "kNN (cosine)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.8159234061438984,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.7909
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.8159
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.797
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.7715
+    }
+   ]
+  },
+  "Fly model (full)": {
+   "chosen": {
+    "n_kc": 2000,
+    "active_frac": 0.02,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "inner_auroc": 0.8497210172670424,
+   "grid": [
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8275
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8047
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7439
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6669
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8386
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8388
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7592
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6581
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8272
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8229
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7484
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.66
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8497
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8248
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.755
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6747
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.805
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8105
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.733
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.672
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8303
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8342
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7607
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6823
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8222
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8396
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7604
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6515
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8273
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.7855
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7252
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6384
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7807
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.7969
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7353
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6518
+    }
+   ]
+  },
+  "Random (sanity)": {
+   "chosen": {},
+   "inner_auroc": 0.4913734961029427,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.4914
+    }
+   ]
+  }
+ },
+ "Ammonia": {
+  "Mahalanobis": {
+   "chosen": {},
+   "inner_auroc": 0.901041755133928,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.901
+    }
+   ]
+  },
+  "kNN (Euclidean)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.899609084303265,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.8727
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.8996
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.8852
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.8404
+    }
+   ]
+  },
+  "One-Class SVM": {
+   "chosen": {
+    "nu": 0.01,
+    "gamma_mult": 10.0
+   },
+   "inner_auroc": 0.8582217968731685,
+   "grid": [
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.7542
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6345
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8581
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.7545
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6147
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8582
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.753
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6426
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.858
+    }
+   ]
+  },
+  "Isolation Forest": {
+   "chosen": {
+    "max_features": 1.0
+   },
+   "inner_auroc": 0.7853703762770532,
+   "grid": [
+    {
+     "params": {
+      "max_features": 1.0
+     },
+     "inner_auroc": 0.7854
+    },
+    {
+     "params": {
+      "max_features": 0.5
+     },
+     "inner_auroc": 0.7785
+    }
+   ]
+  },
+  "kNN (cosine)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.8370320059411119,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.8156
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.837
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.824
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.7925
+    }
+   ]
+  },
+  "Fly model (full)": {
+   "chosen": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 12,
+    "beta": 0.0
+   },
+   "inner_auroc": 0.8677290766878818,
+   "grid": [
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8474
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8164
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7408
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6507
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8276
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.818
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7417
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6508
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8367
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8164
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7313
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.644
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8454
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8246
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7401
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6564
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8114
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8321
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7424
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6652
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7921
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8394
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7632
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6743
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8673
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8413
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7447
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6411
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8067
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.7897
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.708
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6206
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8677
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8296
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7201
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6364
+    }
+   ]
+  },
+  "Random (sanity)": {
+   "chosen": {},
+   "inner_auroc": 0.4921935003684658,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.4922
+    }
+   ]
+  }
+ },
+ "Acetaldehyde": {
+  "Mahalanobis": {
+   "chosen": {},
+   "inner_auroc": 0.9067067387408205,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.9067
+    }
+   ]
+  },
+  "kNN (Euclidean)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.9230692053398659,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.901
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.9231
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.9116
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.8803
+    }
+   ]
+  },
+  "One-Class SVM": {
+   "chosen": {
+    "nu": 0.01,
+    "gamma_mult": 10.0
+   },
+   "inner_auroc": 0.8990814303165534,
+   "grid": [
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.795
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6822
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.899
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.7956
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6789
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8991
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.7971
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6795
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8987
+    }
+   ]
+  },
+  "Isolation Forest": {
+   "chosen": {
+    "max_features": 0.5
+   },
+   "inner_auroc": 0.8254005883487986,
+   "grid": [
+    {
+     "params": {
+      "max_features": 1.0
+     },
+     "inner_auroc": 0.8252
+    },
+    {
+     "params": {
+      "max_features": 0.5
+     },
+     "inner_auroc": 0.8254
+    }
+   ]
+  },
+  "kNN (cosine)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.9060814973338001,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.8771
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.9061
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.8902
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.8502
+    }
+   ]
+  },
+  "Fly model (full)": {
+   "chosen": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "inner_auroc": 0.8888730387119411,
+   "grid": [
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8889
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8605
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.793
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.675
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8424
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8684
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.8143
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6617
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8705
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8579
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7989
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6815
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8581
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8567
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7801
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6731
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8566
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8564
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7781
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6632
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8468
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8548
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7991
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.7121
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8216
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8652
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7991
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6601
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7983
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8271
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7653
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6395
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8547
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8496
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7882
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.662
+    }
+   ]
+  },
+  "Random (sanity)": {
+   "chosen": {},
+   "inner_auroc": 0.49197964789033294,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.492
+    }
+   ]
+  }
+ },
+ "Acetone": {
+  "Mahalanobis": {
+   "chosen": {},
+   "inner_auroc": 0.8943008140302,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.8943
+    }
+   ]
+  },
+  "kNN (Euclidean)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.9119910534943226,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.8923
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.912
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.9012
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.875
+    }
+   ]
+  },
+  "One-Class SVM": {
+   "chosen": {
+    "nu": 0.1,
+    "gamma_mult": 10.0
+   },
+   "inner_auroc": 0.8943352890244952,
+   "grid": [
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.812
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6634
+    },
+    {
+     "params": {
+      "nu": 0.05,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8942
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.8126
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6275
+    },
+    {
+     "params": {
+      "nu": 0.01,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8941
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 1.0
+     },
+     "inner_auroc": 0.8054
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 0.1
+     },
+     "inner_auroc": 0.6627
+    },
+    {
+     "params": {
+      "nu": 0.1,
+      "gamma_mult": 10.0
+     },
+     "inner_auroc": 0.8943
+    }
+   ]
+  },
+  "Isolation Forest": {
+   "chosen": {
+    "max_features": 0.5
+   },
+   "inner_auroc": 0.849993421011936,
+   "grid": [
+    {
+     "params": {
+      "max_features": 1.0
+     },
+     "inner_auroc": 0.844
+    },
+    {
+     "params": {
+      "max_features": 0.5
+     },
+     "inner_auroc": 0.85
+    }
+   ]
+  },
+  "kNN (cosine)": {
+   "chosen": {
+    "k": 1
+   },
+   "inner_auroc": 0.8672119595738336,
+   "grid": [
+    {
+     "params": {
+      "k": 5
+     },
+     "inner_auroc": 0.8457
+    },
+    {
+     "params": {
+      "k": 1
+     },
+     "inner_auroc": 0.8672
+    },
+    {
+     "params": {
+      "k": 3
+     },
+     "inner_auroc": 0.858
+    },
+    {
+     "params": {
+      "k": 10
+     },
+     "inner_auroc": 0.8167
+    }
+   ]
+  },
+  "Fly model (full)": {
+   "chosen": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "inner_auroc": 0.8132947937392148,
+   "grid": [
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.8133
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.81
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7307
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6594
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7979
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8104
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.741
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.64
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7391
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.7952
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7424
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.05,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.666
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7909
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.7805
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7301
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6589
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7186
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.7509
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.6798
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.625
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.776
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8114
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.739
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.02,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6757
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7558
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.7876
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7406
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 7,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6576
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7305
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.7619
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7101
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 4,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6406
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.0
+     },
+     "inner_auroc": 0.7656
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.5
+     },
+     "inner_auroc": 0.8036
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.9
+     },
+     "inner_auroc": 0.7352
+    },
+    {
+     "params": {
+      "n_kc": 2000,
+      "active_frac": 0.1,
+      "conn": 12,
+      "beta": 0.99
+     },
+     "inner_auroc": 0.6514
+    }
+   ]
+  },
+  "Random (sanity)": {
+   "chosen": {},
+   "inner_auroc": 0.48717660480840497,
+   "grid": [
+    {
+     "params": {},
+     "inner_auroc": 0.4872
+    }
+   ]
+  }
+ }
+}

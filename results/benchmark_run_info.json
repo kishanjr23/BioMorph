@@ -1,0 +1,300 @@
+{
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "heldout_gases": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "train_batch": 1,
+ "test_batches": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "calib_fraction": 0.3,
+ "target_fpr": 0.05,
+ "detectors": {
+  "Mahalanobis": "conventional",
+  "kNN (Euclidean)": "conventional",
+  "One-Class SVM": "conventional",
+  "Isolation Forest": "conventional",
+  "kNN (cosine)": "control",
+  "Fly model (full)": "fly",
+  "Ablation: no expansion (m=128)": "ablation",
+  "Ablation: dense wiring": "ablation",
+  "Ablation: no top-k (fixed threshold)": "ablation",
+  "Ablation: no plastic memory (KC nearest neighbour)": "ablation",
+  "Random (sanity)": "sanity"
+ },
+ "chosen_params": {
+  "Ethanol": {
+   "Mahalanobis": {},
+   "kNN (Euclidean)": {
+    "k": 1
+   },
+   "One-Class SVM": {
+    "nu": 0.05,
+    "gamma_mult": 10.0
+   },
+   "Isolation Forest": {
+    "max_features": 1.0
+   },
+   "kNN (cosine)": {
+    "k": 1
+   },
+   "Fly model (full)": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Random (sanity)": {},
+   "Ablation: no expansion (m=128)": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: dense wiring": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: no top-k (fixed threshold)": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: no plastic memory (KC nearest neighbour)": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 7,
+    "beta": 0.0
+   }
+  },
+  "Ethylene": {
+   "Mahalanobis": {},
+   "kNN (Euclidean)": {
+    "k": 1
+   },
+   "One-Class SVM": {
+    "nu": 0.01,
+    "gamma_mult": 10.0
+   },
+   "Isolation Forest": {
+    "max_features": 1.0
+   },
+   "kNN (cosine)": {
+    "k": 1
+   },
+   "Fly model (full)": {
+    "n_kc": 2000,
+    "active_frac": 0.02,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Random (sanity)": {},
+   "Ablation: no expansion (m=128)": {
+    "n_kc": 2000,
+    "active_frac": 0.02,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: dense wiring": {
+    "n_kc": 2000,
+    "active_frac": 0.02,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: no top-k (fixed threshold)": {
+    "n_kc": 2000,
+    "active_frac": 0.02,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: no plastic memory (KC nearest neighbour)": {
+    "n_kc": 2000,
+    "active_frac": 0.02,
+    "conn": 7,
+    "beta": 0.0
+   }
+  },
+  "Ammonia": {
+   "Mahalanobis": {},
+   "kNN (Euclidean)": {
+    "k": 1
+   },
+   "One-Class SVM": {
+    "nu": 0.01,
+    "gamma_mult": 10.0
+   },
+   "Isolation Forest": {
+    "max_features": 1.0
+   },
+   "kNN (cosine)": {
+    "k": 1
+   },
+   "Fly model (full)": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 12,
+    "beta": 0.0
+   },
+   "Random (sanity)": {},
+   "Ablation: no expansion (m=128)": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 12,
+    "beta": 0.0
+   },
+   "Ablation: dense wiring": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 12,
+    "beta": 0.0
+   },
+   "Ablation: no top-k (fixed threshold)": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 12,
+    "beta": 0.0
+   },
+   "Ablation: no plastic memory (KC nearest neighbour)": {
+    "n_kc": 2000,
+    "active_frac": 0.1,
+    "conn": 12,
+    "beta": 0.0
+   }
+  },
+  "Acetaldehyde": {
+   "Mahalanobis": {},
+   "kNN (Euclidean)": {
+    "k": 1
+   },
+   "One-Class SVM": {
+    "nu": 0.01,
+    "gamma_mult": 10.0
+   },
+   "Isolation Forest": {
+    "max_features": 0.5
+   },
+   "kNN (cosine)": {
+    "k": 1
+   },
+   "Fly model (full)": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Random (sanity)": {},
+   "Ablation: no expansion (m=128)": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: dense wiring": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: no top-k (fixed threshold)": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: no plastic memory (KC nearest neighbour)": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   }
+  },
+  "Acetone": {
+   "Mahalanobis": {},
+   "kNN (Euclidean)": {
+    "k": 1
+   },
+   "One-Class SVM": {
+    "nu": 0.1,
+    "gamma_mult": 10.0
+   },
+   "Isolation Forest": {
+    "max_features": 0.5
+   },
+   "kNN (cosine)": {
+    "k": 1
+   },
+   "Fly model (full)": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Random (sanity)": {},
+   "Ablation: no expansion (m=128)": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: dense wiring": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: no top-k (fixed threshold)": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   },
+   "Ablation: no plastic memory (KC nearest neighbour)": {
+    "n_kc": 2000,
+    "active_frac": 0.05,
+    "conn": 7,
+    "beta": 0.0
+   }
+  }
+ },
+ "python": "3.12.0",
+ "numpy": "2.5.5",
+ "pandas": "3.1.1",
+ "sklearn": "1.9.1",
+ "runtime_s": 816
+}
